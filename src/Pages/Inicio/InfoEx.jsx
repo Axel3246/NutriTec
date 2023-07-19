@@ -26,7 +26,7 @@ const InfoEx = () => {
         <Typography
           component="span"
           sx={{
-            color: "#8bc34a",
+            color: "#1e88e5",
             fontWeight: "bold",
             fontSize: { xs: "1.8rem", md: "3.2rem" },
             fontFamily: "Encode Sans Condensed",
