@@ -2,21 +2,21 @@ import React from 'react';
 import { Grid, Container, Typography, Card, CardContent, Avatar } from '@mui/material';
 
 import testimonial1 from '../../assets/Testimonials/testimonial1.jpeg';
-import testimonial2 from '../../assets/Testimonials/testimonial2.png';
+import testimonial2 from '../../assets/Testimonials/testimonial2.jpg';
 import testimonial3 from '../../assets/Testimonials/testimonial3.png';
 
 const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      text: "Soy foráneo y gracias a NutriTec puedo comprar en restaurantes que apoyan mi salud.",
+      text: "Soy foráneo y gracias a la comunidad de NutriTec puedo comprar en restaurantes que apoyan mi salud.",
       author: 'Axel Hernández ~ A00829837',
       avatar: testimonial1,
     },
     {
       id: 2,
       text: '¡Me encanta que los nutriólogos de mi campus forman parte de esta iniciativa!',
-      author: 'Sofía Arreola ~ A00123456',
+      author: 'Karyme Elizabeth ~ A00123456',
       avatar: testimonial2,
     },
     {

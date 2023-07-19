@@ -1,4 +1,6 @@
+// Navbar.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -16,22 +18,28 @@ import re from '../assets/itesn.png';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import LoginIcon from '@mui/icons-material/Login';
 
-const Navbar = () => {
+const Navbar = ({ activePage }) => {
+  const navigate = useNavigate();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('Inicio'); // Set 'Inicio' as active by default
+  const [activeLink, setActiveLink] = useState(activePage); // Set the active page from the prop
 
   const toggleDrawer = (open) => () => {
     setIsDrawerOpen(open);
   };
 
   const menuItems = [
-    { text: 'Inicio', onClick: () => handleLinkClick('Inicio') },
-    { text: 'Comunidad', onClick: () => handleLinkClick('Comunidad') },
+    { text: 'Inicio', route: '/', onClick: () => handleLinkClick('Inicio') },
+    { text: 'Comunidad', route: '/comunidad', onClick: () => handleLinkClick('Comunidad') },
   ];
 
   const handleLinkClick = (linkText) => {
     setActiveLink(linkText);
     console.log(`${linkText} clicked`);
+  };
+
+  const handleNavButtonClick = (route) => {
+    navigate(route);
+    setIsDrawerOpen(false); // Close the drawer after navigation (if open)
   };
 
   return (
@@ -41,11 +49,11 @@ const Navbar = () => {
           background: '#F7F7F7',
           boxShadow: 'none',
           mb: 2,
-          position: "fixed",
+          position: 'fixed',
           top: 0,
           left: 0,
           right: 0,
-          zIndex: 1
+          zIndex: 1,
         }}
       >
         <AppBar position="static" sx={{ width: '100%', background: '#F7F7F7', borderBottom: { xs: '1.5px solid #ccc', md: '0px solid #ccc' }, py: 0.5 }}>
@@ -87,15 +95,15 @@ const Navbar = () => {
                 alignItems: 'center',
                 color: 'black',
                 fontWeight: 'bold',
-                mr: "auto",
-                ml: "3rem"
+                mr: 'auto',
+                ml: '3rem',
               }}
             >
               {menuItems.map((item, index) => (
                 <ListItem
                   button
                   key={index}
-                  onClick={item.onClick}
+                  onClick={() => handleNavButtonClick(item.route)}
                   sx={{
                     color: activeLink === item.text ? '#8bc34a' : 'inherit',
                     borderBottom: activeLink === item.text ? '2px solid #8bc34a' : 'none',
@@ -107,8 +115,8 @@ const Navbar = () => {
             </List>
 
             <Box sx={{ display: { xs: 'block', md: 'block' } }}>
-              <Button color="success" variant='outlined' size='small' sx={{}}onClick={() => console.log('Sign In clicked')}>
-                <IconButton edge="start" sx={{ color: '#8bc34a' }} aria-label="menu" size='small'>
+              <Button color="success" variant="outlined" size="small" onClick={() => console.log('Sign In clicked')}>
+                <IconButton edge="start" sx={{ color: '#8bc34a' }} aria-label="menu" size="small">
                   <LoginIcon />
                 </IconButton>
               </Button>
@@ -127,16 +135,14 @@ const Navbar = () => {
         >
           <List>
             {menuItems.map((item, index) => (
-              <ListItem button key={index} onClick={() => handleLinkClick(item.text)}>
+              <ListItem button key={index} onClick={() => handleNavButtonClick(item.route)}>
                 <ListItemText primary={item.text} />
               </ListItem>
             ))}
           </List>
         </Drawer>
       </Box>
-      <div style={{ paddingTop: "80px" }}>
-        {/* Your existing content */}
-        {/* Place the existing content inside this div and add padding-top to create space for the fixed navbar */}
+      <div style={{ paddingTop: '80px' }}>
       </div>
     </>
   );

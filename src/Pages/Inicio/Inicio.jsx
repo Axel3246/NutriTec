@@ -20,7 +20,7 @@ import tec1 from "../../assets/Landing/tec1.jpeg";
 const Inicio = () => {
   return (
     <>
-      <Navbar />
+      <Navbar activePage="Inicio" />
       <Container>
         <Grid
           container
@@ -84,7 +84,7 @@ const Inicio = () => {
             {/* Center the button for xs, align left for md */}
             <Grid container justifyContent={{ xs: "center", md: "flex-start" }}>
               <Button
-                href="#"
+                href="/comunidad"
                 variant="contained"
                 sx={{
                   color: "white",
