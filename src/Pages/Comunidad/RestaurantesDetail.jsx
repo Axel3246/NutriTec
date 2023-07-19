@@ -120,7 +120,6 @@ const RestaurantesDetail = () => {
   </CardContent>
 </Card>
 
-
       {console.log(lifeTecComments)}
 
       {/* LiFe Tec Comments Section */}
