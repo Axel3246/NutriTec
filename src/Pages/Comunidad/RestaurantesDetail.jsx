@@ -108,17 +108,18 @@ const RestaurantesDetail = () => {
       <Grid item xs={12} md={3}>
         <Avatar src={restaurantData.imageURL} alt={restaurantData.nombre} sx={{ width: '25%', height: 'auto' }} />
       </Grid>
-      <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
-        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+      <Grid item xs={12} md={6}>
+        <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: { xs: 'center', md: 'left' } }}>
           {restaurantData.nombre}
         </Typography>
       </Grid>
       <Grid item xs={12} md={3}>
-        <Rating name="read-only" value={restaurantData.rating} readOnly sx={{mt: 2}} />
+        <Rating name="read-only" value={restaurantData.rating} readOnly sx={{ mt: { xs: 2, md: 2 } }} />
       </Grid>
     </Grid>
   </CardContent>
 </Card>
+
 
       {console.log(lifeTecComments)}
 
