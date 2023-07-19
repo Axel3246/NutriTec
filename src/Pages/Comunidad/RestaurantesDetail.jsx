@@ -114,7 +114,7 @@ const RestaurantesDetail = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} md={3}>
-        <Rating name="read-only" value={restaurantData.rating} readOnly sx={{mt: 2}} />
+        <Rating name="read-only" value={restaurantData.rating} readOnly sx={{mt:{XS: 0, md: 2}}} />
       </Grid>
     </Grid>
   </CardContent>
