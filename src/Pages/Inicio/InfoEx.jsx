@@ -88,6 +88,38 @@ const InfoEx = () => {
         </AccordionDetails>
       </Accordion>
 
+      <Accordion sx={{ mb: 3 }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          id="appointment-header"
+        >
+          <Typography variant="h6">
+            Plato del Buen Comer
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography variant="body2">
+          Aquí va el contenido de los PB. 
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion sx={{ mb: 3 }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          id="appointment-header"
+        >
+          <Typography variant="h6">
+            Jarra del Buen Beber
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography variant="body2">
+          Aquí va el contenido de JBB. 
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

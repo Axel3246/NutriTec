@@ -13,9 +13,11 @@ import {
   Divider,
   Chip,
   Grid,
+  Button
 } from '@mui/material';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const RestaurantesDetail = () => {
   const { id } = useParams();
@@ -96,22 +98,23 @@ const RestaurantesDetail = () => {
     <>
       <Navbar activePage="Comunidad" />
       <Container >
+      <Button size="large" type="submit" variant="filled" color="primary" sx={{ height: { md: 40 }, ml: -2, mb: { md: -1 } }} href="/comunidad">
+          <ArrowBackIcon />
+          Regresar
+        </Button>
       <Card sx={{mb: 2, mt: 2}}>
         <CardContent>
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={3}>
-              {/* Avatar / Image */}
+
               <Avatar src={restaurantData.imageURL} alt={restaurantData.nombre} sx={{ width: '20%', height: 'auto' }} />
             </Grid>
             <Grid item xs={12} md={6}>
-              {/* Name */}
+
               <Typography variant="h6" sx={{ml: '-10rem', fontWeight: "bold"}}>{restaurantData.nombre}</Typography>
-              {/* Display other restaurant details here */}
+
             </Grid>
-    
-              {/* Rating */}
-              <Rating name="read-only" value={restaurantData.rating} readOnly />
-    
+              <Rating name="read-only" sx={{mt: 3}} value={restaurantData.rating} readOnly />
           </Grid>
         </CardContent>
       </Card>
@@ -133,7 +136,7 @@ const RestaurantesDetail = () => {
               >
                 nutriólogos
               </Typography>
-              {' '}de tu campus opinan...
+              {' '}de tu campus opina...
           </Typography>
           {lifeTecComments.map((comment) => (
             <Card key={comment.id} mt={2} sx={{mb:2}}>

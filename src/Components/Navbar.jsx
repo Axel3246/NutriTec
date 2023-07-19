@@ -17,6 +17,7 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 import re from '../assets/itesn.png';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import LoginIcon from '@mui/icons-material/Login';
+import "./styles.css"
 
 const Navbar = ({ activePage }) => {
   const navigate = useNavigate();
@@ -70,7 +71,7 @@ const Navbar = ({ activePage }) => {
                 <MenuIcon />
               </IconButton>
             </Box>
-
+            <a className="link" href='/'>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <img src={re} alt="Logo" style={{ width: '40px', marginRight: '8px' }} />
               <Typography variant="h5" sx={{ color: 'black', fontWeight: 'bold', fontSize: { xs: '1.7rem', s: '1.7rem', md: '1.8rem' } }}>
@@ -87,6 +88,7 @@ const Navbar = ({ activePage }) => {
                 </Typography>
               </Typography>
             </Box>
+            </a>
 
             <List
               sx={{

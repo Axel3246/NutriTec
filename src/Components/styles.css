@@ -1,0 +1,15 @@
+.link {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .link:visited {
+    color: black;
+  }
+  
+  .link:hover {
+    text-decoration: none;
+    color: black;
+  }
+  

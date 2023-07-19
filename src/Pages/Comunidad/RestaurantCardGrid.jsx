@@ -128,7 +128,7 @@ const RestaurantCardGrid = () => {
                       component="img"
                       image={restaurant.url}
                       alt={restaurant.nombre}
-                      sx={{ objectFit: 'cover', height: { xs: 150, s: 180, m: 180, lg: 180, xl: 180 }, mt: 1 }}
+                      sx={{ objectFit: 'cover', height: { xs: 150, s: 180, m: 180, lg: 180, xl: 180 }, mt: 1, backgroundColor: 'transparent' }}
                     />
               <CardContent>
               <Chip
@@ -137,20 +137,33 @@ const RestaurantCardGrid = () => {
               style={{ borderRadius: 10 }}
               sx={{ borderRadius: 10, marginBottom: 1, mr: 1 }}
                       />
-                      {restaurant.recom === 'En Revisión' ? (
-                        <Chip
-                          label={restaurant.recom}
-                          style={{ borderRadius: 10 }}        
-                          sx={{ marginBottom: 1, backgroundColor: '#fdd835' }}
-                        />
-                      ) : 
+                      <br></br>
+                      {restaurant.recom === 'Personalizable' ? 
                       <Chip
                           label={restaurant.recom}
                           style={{ borderRadius: 10 }}
                           color='success'
-                          sx={{ marginBottom: 1 }}
+                          sx={{ marginBottom: 1, backgroundColor: '#1e88e5' }}
                         />
+                      : null}
+                      {restaurant.recom === 'Saludable' || restaurant.recom === "Muy Saludable" ? 
+                      <Chip
+                          label={restaurant.recom}
+                          style={{ borderRadius: 10 }}
+                          color='success'
+                          sx={{ marginBottom: 1, backgroundColor: '#8bc34a'}}
+                        /> 
+                        : null
                       }
+                      {restaurant.recom !== 'Saludable' && restaurant.recom !== 'Personalizable' && restaurant.recom !== "Muy Saludable"  ? 
+                      <Chip
+                          label={restaurant.recom}
+                          style={{ borderRadius: 10 }}        
+                          sx={{ marginBottom: 1, backgroundColor: '#fdd835' }}
+                        />
+                        : null
+                      }
+
                 <Typography variant="h6" sx={{fontWeight: "bold"}}>{restaurant.nombre}</Typography>
                 <Rating name="read-only" value={restaurant.rating} readOnly />
               </CardContent>
