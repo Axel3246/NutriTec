@@ -95,7 +95,7 @@ const RestaurantesDetail = () => {
   return (
     <>
       <Navbar activePage="Comunidad" />
-      <Container>
+      <Container >
       <Card sx={{mb: 2, mt: 2}}>
         <CardContent>
           <Grid container spacing={2} alignItems="center">
@@ -116,7 +116,7 @@ const RestaurantesDetail = () => {
         </CardContent>
       </Card>
 
-
+      {console.log(lifeTecComments)}
 
       {/* LiFe Tec Comments Section */}
       {lifeTecComments.length > 0 && (
@@ -136,7 +136,7 @@ const RestaurantesDetail = () => {
               {' '}de tu campus opinan...
           </Typography>
           {lifeTecComments.map((comment) => (
-            <Card key={comment.id} mt={2}>
+            <Card key={comment.id} mt={2} sx={{mb:2}}>
               <CardContent>
                 <Grid container spacing={2}>
                   <Grid item>
