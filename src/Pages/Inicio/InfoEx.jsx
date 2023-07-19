@@ -44,7 +44,7 @@ const InfoEx = () => {
         <AccordionDetails>
           <Typography variant="body2">
           El Recordatorio de 24 Horas se refiere a un método de recolección de datos utilizado para obtener información sobre la ingesta alimentaria 
-          de una persona durante un período de 24 horas. Es ampliamente utilizado en nutrición y en la evaluación dietética individual. 
+          de una persona durante un período de 24 horas. Es ampliamente utilizado en nutrición y en la evaluación dietética individual. <br/><br/>
           Aprende más sobre el Recordatorio de 24 Horas <a className="link" href="https://www.youtube.com/watch?v=-DsiGECW8qQ" target="_blank">aquí</a>.
           </Typography>
         </AccordionDetails>
@@ -59,7 +59,7 @@ const InfoEx = () => {
         <AccordionDetails>
           <Typography variant="body2">
           El formulario de Frecuencia de Alimentos es una herramienta utilizada en la evaluación 
-          dietética para recopilar información sobre la frecuencia con la que una persona consume ciertos alimentos y grupos de alimentos en su dieta.
+          dietética para recopilar información sobre la frecuencia con la que una persona consume ciertos alimentos y grupos de alimentos en su dieta.<br/><br/>
           Aprende más sobre el Formulario de Frecuencia de Alimentos <a className="link" href="https://www.youtube.com/watch?v=XJV3yZyhgAE" target="_blank">aquí</a>.
           </Typography>
         </AccordionDetails>
@@ -75,7 +75,7 @@ const InfoEx = () => {
         <AccordionDetails>
           <Typography variant="body2">
           Los macronutrientes son los componentes esenciales de la dieta que proporcionan la mayor parte de la energía necesaria para el funcionamiento del organismo. 
-          Estos nutrientes se dividen en tres categorías: carbohidratos, proteínas y grasas. 
+          Estos nutrientes se dividen en tres categorías: carbohidratos, proteínas y grasas. <br/><br/>
           Aprende más sobre Macronutrientes <a className="link" href="https://www.youtube.com/watch?v=smPR215SRzM" target="_blank">aquí</a>.
           </Typography>
         </AccordionDetails>
@@ -90,7 +90,7 @@ const InfoEx = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography variant="body2">
-          Los micronutrientes son nutrientes esenciales que el cuerpo necesita en pequeñas cantidades para mantener una buena salud y funcionar correctamente.
+          Los micronutrientes son nutrientes esenciales que el cuerpo necesita en pequeñas cantidades para mantener una buena salud y funcionar correctamente. <br/><br/>
           Aprende más sobre Micronutrientes <a className="link" href="https://www.youtube.com/watch?v=-3rD7BvmZzU" target="_blank">aquí</a>.
           </Typography>
         </AccordionDetails>
