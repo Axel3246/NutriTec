@@ -7,6 +7,7 @@ import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 
 const RestaurantCardGrid = () => {
+  const navigate = useNavigate(); // Add useNavigate hook
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -43,8 +44,9 @@ const RestaurantCardGrid = () => {
     fetchData();
   }, []);
 
-  const handleCardClick = (cardId) => {
-    navigate(`/card/${cardId}`);
+  const handleCardClick = (id) => {
+    console.log(`Pasare el id ${id}`)
+    navigate(`/restaurante/${id}`);
   };
 
   if (loading) {
@@ -107,7 +109,7 @@ const RestaurantCardGrid = () => {
           }}
         >
           ¡Hora de empezar a formar hábitos de alimentación saludable! Aquí encontrarás todas las opiniones de la comunidad{" "}
-          <Typography variant="span" sx={{ color: "blue", fontWeight: "bold" }}>
+          <Typography variant="span" sx={{ color: "#1e88e5", fontWeight: "bold" }}>
             TEC{" "}
           </Typography>{" "}
           y los lugares donde puedes comer saludablemente.
@@ -135,14 +137,20 @@ const RestaurantCardGrid = () => {
               style={{ borderRadius: 10 }}
               sx={{ borderRadius: 10, marginBottom: 1, mr: 1 }}
                       />
-                      {restaurant.recom !== '' ? (
+                      {restaurant.recom === 'En Revisión' ? (
                         <Chip
+                          label={restaurant.recom}
+                          style={{ borderRadius: 10 }}        
+                          sx={{ marginBottom: 1, backgroundColor: '#fdd835' }}
+                        />
+                      ) : 
+                      <Chip
                           label={restaurant.recom}
                           style={{ borderRadius: 10 }}
                           color='success'
                           sx={{ marginBottom: 1 }}
                         />
-                      ) : null}
+                      }
                 <Typography variant="h6" sx={{fontWeight: "bold"}}>{restaurant.nombre}</Typography>
                 <Rating name="read-only" value={restaurant.rating} readOnly />
               </CardContent>
