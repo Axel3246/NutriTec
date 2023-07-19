@@ -69,7 +69,7 @@ const Inicio = () => {
               <Typography
                 component="span"
                 sx={{
-                  color: "blue",
+                  color: "#1e88e5",
                   fontWeight: "bold",
                   fontSize: { xs: "1rem", md: "1.5rem" },
                   fontFamily: "Encode Sans Condensed",
@@ -127,7 +127,7 @@ const Inicio = () => {
           <Typography
             component="span"
             sx={{
-              color: "#8bc34a",
+              color: "#1e88e5",
               fontWeight: "bold",
               fontSize: { xs: "1.8rem", md: "3rem" },
               fontFamily: "Encode Sans Condensed",
@@ -149,7 +149,7 @@ const Inicio = () => {
           }}
         >
           Queremos que los hábitos alimenticios de comunidad{" "}
-          <Typography variant="span" sx={{ color: "blue", fontWeight: "bold" }}>
+          <Typography variant="span" sx={{ color: "#1e88e5", fontWeight: "bold" }}>
             TEC{" "}
           </Typography>{" "}
           mejoren. Es por eso que contamos con la ayuda de los siguientes
@@ -195,7 +195,7 @@ const Inicio = () => {
           }}
         >
           Conoce algunos de los testimonios que la comunidad{" "}
-          <Typography variant="span" sx={{ color: "blue", fontWeight: "bold" }}>
+          <Typography variant="span" sx={{ color: "#1e88e5", fontWeight: "bold" }}>
             TEC{" "}
           </Typography>{" "}
           ha dejado al usar la página.{" "}
