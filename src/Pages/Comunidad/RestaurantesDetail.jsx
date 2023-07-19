@@ -102,22 +102,23 @@ const RestaurantesDetail = () => {
           <ArrowBackIcon />
           Regresar
         </Button>
-      <Card sx={{mb: 2, mt: 2}}>
-        <CardContent>
-          <Grid container spacing={2} alignItems="center">
-            <Grid item xs={12} md={3}>
-
-              <Avatar src={restaurantData.imageURL} alt={restaurantData.nombre} sx={{ width: '20%', height: 'auto' }} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-
-              <Typography variant="h6" sx={{ml: '-10rem', fontWeight: "bold"}}>{restaurantData.nombre}</Typography>
-
-            </Grid>
-              <Rating name="read-only" sx={{mt: 3}} value={restaurantData.rating} readOnly />
-          </Grid>
-        </CardContent>
-      </Card>
+        <Card sx={{ mb: 2, mt: 2 }}>
+  <CardContent>
+    <Grid container spacing={2} alignItems="center">
+      <Grid item xs={12} md={3}>
+        <Avatar src={restaurantData.imageURL} alt={restaurantData.nombre} sx={{ width: '25%', height: 'auto' }} />
+      </Grid>
+      <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
+        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+          {restaurantData.nombre}
+        </Typography>
+      </Grid>
+      <Grid item xs={12} md={3}>
+        <Rating name="read-only" value={restaurantData.rating} readOnly sx={{mt: 2}} />
+      </Grid>
+    </Grid>
+  </CardContent>
+</Card>
 
       {console.log(lifeTecComments)}
 
