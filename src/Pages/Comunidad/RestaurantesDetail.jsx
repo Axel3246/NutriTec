@@ -89,7 +89,7 @@ const RestaurantesDetail = () => {
   }
 
   // Separate comments into "LiFe Tec" and "Comunidad Tec" sections
-  const lifeTecComments = comments.filter((comment) => comment.partede === 'LiFe Tec');
+  const lifeTecComments = comments.filter((comment) => comment.partede === 'LiFe Tec' || comment.partede === 'Estudiante LNB');
   const comunidadTecComments = comments.filter((comment) => comment.partede === 'Comunidad Tec');
 
   return (
@@ -146,11 +146,9 @@ const RestaurantesDetail = () => {
                   </Grid>
                   <Grid item xs sx={{mb: -1}}>
                     {/* Chip for "partede" */}
-                    {comment.partede === 'LiFe Tec' ? (
+    
                       <Chip label={comment.partede} sx={{ mb: 1, backgroundColor: '#8bc34a', color: 'white', fontWeight: 'bold' }} />
-                    ) : (
-                      <Chip color="primary" label={comment.partede} sx={{ mb: 1, fontWeight: 'bold' }} />
-                    )}
+
                     {/* Typography for "titulo", "precio", "fecha", and "comentario" */}
                     <Typography variant="body1" sx={{fontWeight: "bold"}}>{comment.titulo}</Typography>
                     <Typography variant="body1" sx={{fontSize: {xs: '0.8rem', md: '0.8rem'}}}>Fecha: {comment.fecha}</Typography>
