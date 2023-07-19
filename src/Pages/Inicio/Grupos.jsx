@@ -28,8 +28,8 @@ const Grupos = () => {
               ></CardHeader>
               <CardContent>
                 <Typography variant="body2" sx={{mt: -1, fontSize: '1rem'}}>
-                  Forma parte de esta iniciativa al dejar tu opinión en los restaurantes
-                  que has visitado y probado. Recuerda, ¡todos somos comunidad TEC!
+                  Formarás parte de esta iniciativa al dejar tu opinión en los restaurantes
+                  que has visitado y probado. Recuerda, ¡por una comunidad TEC más saludable!
                 </Typography>
               </CardContent>
             </Card>
