@@ -17,6 +17,7 @@ import InfoEx from "./InfoEx";
 import tec1 from "../../assets/Landing/tec1.jpeg";
 
 
+
 const Inicio = () => {
   return (
     <>
@@ -28,7 +29,7 @@ const Inicio = () => {
           spacing={2}
           sx={{
             mb: { xs: "2rem", md: "3rem" },
-            mt: { xs: "0.5rem", md: "1rem" },
+            mt: { xs: "0.3rem", md: "1rem" },
           }}
         >
           <Grid item xs={12} md={6}>

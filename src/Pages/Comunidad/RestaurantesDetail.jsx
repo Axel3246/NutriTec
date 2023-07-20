@@ -98,7 +98,7 @@ const RestaurantesDetail = () => {
     <>
       <Navbar activePage="Comunidad" />
       <Container >
-      <Button size="large" type="submit" variant="filled" color="primary" sx={{ height: { md: 40 }, ml: -2, mb: { md: -1 } }} href="/comunidad">
+      <Button size="large" type="submit" variant="filled" color="primary" sx={{ height: { md: 40 }, ml: -2, mb: { md: -1 }, mt: 1 }} href="/comunidad">
           <ArrowBackIcon />
           Regresar
         </Button>

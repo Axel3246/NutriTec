@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import re from '../assets/itesn.png';
+import nutritec from '../assets/nutritec.png'
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import LoginIcon from '@mui/icons-material/Login';
 import "./styles.css"
@@ -57,13 +58,14 @@ const Navbar = ({ activePage }) => {
           zIndex: 1,
         }}
       >
-        <AppBar position="static" sx={{ width: '100%', background: '#F7F7F7', borderBottom: { xs: '1.5px solid #ccc', md: '0px solid #ccc' }, py: 0.5 }}>
+        <AppBar position="static" sx={{ width: '100%', background: '#F7F7F7', borderBottom: { xs: '1.5px solid #ccc', md: '0px solid #ccc' }, py: 0.5}}>
           <Toolbar
             sx={{
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
               background: '#F7F7F7',
+              
             }}
           >
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
@@ -73,7 +75,7 @@ const Navbar = ({ activePage }) => {
             </Box>
             <a className="link" href='/'>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <img src={re} alt="Logo" style={{ width: '40px', marginRight: '8px' }} />
+              <img src={nutritec} alt="Logo" style={{ width: '70px', marginRight: '-10px' }} />
               <Typography variant="h5" sx={{ color: 'black', fontWeight: 'bold', fontSize: { xs: '1.7rem', s: '1.7rem', md: '1.8rem' } }}>
                 Nutri<Typography
                   component="span"
